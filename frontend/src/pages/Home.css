@@ -1,0 +1,72 @@
+/* Apply blur to the entire background when an ad appears */
+.blurred-background {
+    filter: blur(8px);
+    transition: filter 0.3s ease-in-out;
+  }
+  
+  /* Overlay for ad popup */
+  .ad-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    backdrop-filter: blur(10px); /* Glass blur effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+  }
+  
+  /* Ad container */
+  .ad-container {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px); /* Glass effect inside the ad */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+  }
+  
+  /* Ad image */
+  .ad-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Ad title */
+  .ad-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Ad description */
+  .ad-description {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  /* Close button */
+  .close-ad-button {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .close-ad-button:hover {
+    color: #000;
+  }
+  
